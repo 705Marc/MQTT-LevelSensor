@@ -9,9 +9,9 @@
     /*Echo PIN*/
     #define ECHO 2
 
-    /*Trigger Time (µS)*/
+    /*Trigger Time (mS)*/
     /*Duration off the HIGH Signal to trigger the sensor*/
-    #define TRIG_TIME 15
+    #define TRIG_TIME 5
 
     /*FACTOR from Time to Distance*/
     /*this value may depend on the sensor*/
