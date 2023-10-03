@@ -4,10 +4,10 @@
 /*Sensor settings*/
 
     /*Trigger PIN*/
-    #define TRIG 1
+    #define TRIG 4
 
     /*Echo PIN*/
-    #define ECHO 2
+    #define ECHO 5
 
     /*Trigger Time (mS)*/
     /*Duration off the HIGH Signal to trigger the sensor*/
@@ -31,15 +31,16 @@
     /*TankNumber alternate way to name the tanks*/
     #define TANK_NUMBER "1"
 
+    /*SleepTime in Minutes*/
+    #define SLEEP_TIME 20
+
+
 
 /*WiFi settings*/
 
     #define SSID "SSID"
     #define PASSWORD "PASSWORD"
-    #define HOSTNAME "LIR_Tank"
 
-    /*define if the hostname should end with the direction and Number of the tank*/
-    #define HOSTNAME_TANK_DEFINITION true
 
     
     
@@ -47,19 +48,8 @@
 /*MQTT settings*/
 
     /*Broker Address*/
-    #define BROKER_ADDR "smarthome.705marc.home"
+    #define BROKER_ADDR "BROKER ADDRESS"
     #define BROKER_PORT 1883
 
-
-    /*Topic to send the state*/
-    /*you can add as many as needed*/
-    #ifdef TANK_DIRECTION "North"
-    	#define Topic "/home/room/garden/sensor/level/tankNorth/state"
-    #elif TANK_DIRECTION "South"
-        #define Topic "/home/room/garden/sensor/level/tankSouth/state"
-    #elif TANK_NUMBER "1"
-    	#define Topic "/home/room/garden/sensor/level/tankNorth/state"
-    #elif TANK_NUMBER "2"
-        #define Topic "/home/room/garden/sensor/level/tankSouth/state"
-    #endif
+    #define TOPIC "/home/room/garden/sensor/level/tankSouth/state"
 
